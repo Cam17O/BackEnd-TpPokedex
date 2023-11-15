@@ -3,7 +3,7 @@
 */
 
 
-console.log("Hellow World!");
+console.log("Démarage");
 
 const fs= require('fs');
 // Définir l'emplacement des fichiers bases de données
@@ -16,7 +16,7 @@ const IMAGE_POKEMON = "./FILES/images";
 
 // Définir un port 
 
-const port = 5001;
+const port = 8080;
 
 // lancer un serveur express
 const express = require('express');
@@ -27,7 +27,7 @@ const app = express();
 app.use(express.static('FILES'));
 
 // lancer le serveur et attendre
-app.listen(port, '0.0.0.0',
+app.listen(port, '172.16.195.254',
     ()=>{
         console.log('Le serveur pokémon écoute sur le port : ' + port);
     }
